@@ -1,5 +1,5 @@
 ##---------------------------------------------------------------------
-## Task1a.py
+## Task1b.py
 ##
 ## Description: Creating the initial buffer script
 ##
@@ -11,13 +11,17 @@
 # import system modules
 import arcpy
 
+# Set workspace
+arcpy.env.workspace = "V:/lg297_PS4/Data"
+#check this
+arcpy.env.overwriteOutput = True 
+
 # Set local variables 
-in_features = "V:/lg297_PS4/Data/streams.shp"
+in_features = "streams.shp"
 out_feature_class = "V:/lg297_PS4/Scratch/StrmBuff1km.shp"
 buffDist = "1000 meters"
 
 # Buffer the results
-arcpy.Buffer_analysis(in_features, out_feature_class,buffDist,'FULL','ROUND','ALL')
+arcpy.Buffer_analysis(in_features, out_feature_class, buffDist,'FULL','ROUND','ALL')
 
 print(arcpy.GetMessages)
-
