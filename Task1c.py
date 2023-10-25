@@ -17,9 +17,8 @@ arcpy.env.overwriteOutput = True
 
 # Set local variables 
 in_features = "streams.shp"
-out_feature_class = "V:/lg297_PS4/Scratch/StrmBuff1km.shp"
-buffDist = arcpy.GetParameterAsText()
-
+out_feature_class = sys.argv[2]
+buffDist = sys.argv[1]
 # Buffer the results
 arcpy.Buffer_analysis(in_features, out_feature_class, buffDist,'FULL','ROUND','ALL')
 
