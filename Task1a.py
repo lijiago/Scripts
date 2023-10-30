@@ -12,8 +12,8 @@
 import arcpy
 
 # Set local variables 
-in_features = "V:/lg297_PS4/Data/streams.shp"
-out_feature_class = "V:/lg297_PS4/Scratch/StrmBuff1km.shp"
+in_features = "V:/ENV859_PS4/Data/streams.shp"
+out_feature_class = "V:/ENV859_PS4/Scratch/StrmBuff1km.shp"
 buffDist = "1000 meters"
 
 # Buffer the results

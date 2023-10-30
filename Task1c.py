@@ -12,7 +12,7 @@
 import arcpy
 
 # Set workspace
-arcpy.env.workspace = "V:/lg297_PS4/Data"
+arcpy.env.workspace = "V:/ENV859_PS4/Data"
 arcpy.env.overwriteOutput = True 
 
 # Set local variables 
