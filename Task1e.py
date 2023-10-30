@@ -17,10 +17,12 @@ arcpy.env.overwriteOutput = True
 
 # Set local variables 
 in_features = "streams.shp"
-buffDist = sys.argv[1]
-out_feature_class = (f"V:/ENV859_PS4/Scratch/StrmBuff{int(buffDist)}m.shp")
+buffDist = ["100", "200", "300", "400", "500"]
 
-# Buffer the results
-arcpy.Buffer_analysis(in_features, out_feature_class, buffDist,'FULL','ROUND','ALL')
 
-print(arcpy.GetMessages)
+# Buffer the results, iterating through the list
+for Dist in buffDist:
+    out_feature_class = (f"V:/ENV859_PS4/Scratch/StrmBuff{int(Dist)}m.shp")
+    arcpy.Buffer_analysis(in_features, out_feature_class, Dist,'FULL','ROUND','ALL')
+
+
