@@ -22,7 +22,7 @@ TriCounties_fc = "V:\\ENV859_PS4\\Data\\TriCounties.shp"
 
 # creating a list of all 5 features that start with "BMR" in its name
 point_fc_shp = arcpy.ListFeatureClasses(wild_card = 'BMR*')
-#removing .shp in list
+#removing .shp in list using .replace function
 point_fc = [item.replace('.shp', '') for item in point_fc_shp]
 
 # Checking if product edition is available 
